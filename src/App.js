@@ -18,7 +18,7 @@ function App() {
   //use EFFECT
   useEffect(() => {
     filterHandler();
-  }, [todos, status]);
+  });
 
   //Functions
   const filterHandler = () => {

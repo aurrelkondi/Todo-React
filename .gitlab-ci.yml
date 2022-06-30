@@ -1,0 +1,15 @@
+image: node:16-alpine
+
+stages:
+  - publish
+
+pages:
+  stage: publish
+  script:
+    - npm install
+    - CI=false npm run build
+    - mkdir build
+    - cp -r build/* public/
+  artifacts:
+    paths:
+      - public
